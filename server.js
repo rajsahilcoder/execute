@@ -4,11 +4,17 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const { adminAuth, userAuth } = require("./middleware/auth.js");
 
-const PORT = 5000;
+const PORT = 5030;
 
 app.set("view engine", "ejs");
 
 connectDB();
+
+// static files
+app.use(express.static('public'));
+app.use('/css',express.static(__dirname+'public/css'));
+app.use('/js',express.static(__dirname+'public/js'));
+app.use('/img',express.static(__dirname+'public/img'));
 
 app.use(express.json());
 app.use(cookieParser());

@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/logsign.css">
+  
+
 </head>
 
 <body>
-  <h1>Login Page</h1>
+  <!-- <h1>Login Page</h1>
   <form>
     <div class="error" style="background-color: red;"></div><br>
     <label for="username" >Username</label><br>
@@ -16,8 +20,37 @@
     <label for="password">Password</label><br>
     <input type="password" id="password" required><br>
     <input type="submit" value="login"><br>
-    </form>
-  <a href="/register">Don't have an accout? Register</a>
+  </form>
+  <a href="/register">Don't have an accout? Register</a> -->
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+    
+    <div class="signup">
+      <form>
+        <label for="chk" aria-hidden="true">Login</label>
+        <!-- <input type="text" name="txt" id = "username" placeholder="username" required=""> -->
+        
+        <!-- <input type="password" name="pswd" id = "password" placeholder="password" required=""> -->
+        <!-- <button type = "submit" value = "login">Sign up</button> -->
+        <div class="error" style="background-color: red;"></div>
+        <!-- <label for="username" >Username</label><br> -->
+        <input type="text" id="username" placeholder = "username" required/><br>
+        <!-- <label for="password">Password</label><br> -->
+        <input type="password" id="password" placeholder = "password" required><br>
+        <button type = "submit" value = "login">Login</button>
+        <!-- <input type="submit" id = "submit" value="login"><br> -->
+      </form>
+    </div>
+    
+    <!-- <div class="login">
+      <form>
+        <label for="chk" aria-hidden="true">ADMIN</label> -->
+        <!-- <input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button> -->
+      <!-- </form> -->
+    <!-- </div> -->
+  </div>
 
   <script>
     const form = document.querySelector('form')
@@ -25,7 +58,7 @@
     const password = document.querySelector('#password')
     const display = document.querySelector('.error')
 
-   form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault()
       display.textContent = ''
       try {
